@@ -1,0 +1,6 @@
+{
+  "name": "نظام إدارة الأكاديمية الرياضية",
+  "description": "نظام متكامل لإدارة الأكاديميات الرياضية واللاعبين والمدربين والاشتراكات والمدفوعات والمخزون والحضور مع واجهة ويب وتطبيق جوال وتصميم تفاعلي متقدم.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
