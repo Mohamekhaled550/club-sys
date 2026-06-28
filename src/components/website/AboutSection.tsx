@@ -1,6 +1,5 @@
 import React from 'react';
 import { Target, Eye, CheckCircle2, ShieldCheck, Trophy } from 'lucide-react';
-import { motion } from 'motion/react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -38,9 +37,8 @@ export const AboutSection: React.FC = () => {
           {/* Right column: Editorial Cards (col-span-6) */}
           <div className="lg:col-span-6 space-y-10">
             
-            <motion.div 
-              whileHover={{ y: -8 }}
-              className="p-8 sm:p-10 glass-card luxury-border rounded-[28px] relative overflow-hidden group transition-all duration-500"
+            <div 
+              className="p-8 sm:p-10 glass-card luxury-border rounded-[28px] relative overflow-hidden group transition-all duration-500 hover:-translate-y-2"
             >
               {/* Decorative wine shape inside */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#5A0B17]/15 rounded-bl-[40px] group-hover:bg-[#5A0B17]/25 transition-all duration-500" />
@@ -56,11 +54,10 @@ export const AboutSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              whileHover={{ y: -8 }}
-              className="p-8 sm:p-10 glass-card luxury-border rounded-[28px] relative overflow-hidden group transition-all duration-500"
+            <div 
+              className="p-8 sm:p-10 glass-card luxury-border rounded-[28px] relative overflow-hidden group transition-all duration-500 hover:-translate-y-2"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#5A0B17]/15 rounded-bl-[40px] group-hover:bg-[#5A0B17]/25 transition-all duration-500" />
               
@@ -75,7 +72,7 @@ export const AboutSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
           </div>
 

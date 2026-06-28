@@ -113,10 +113,9 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
         {/* 3 luxurious packages row */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-24">
           {plans.map((plan, idx) => (
-            <motion.div
+            <div
               key={idx}
-              whileHover={{ y: -10 }}
-              className={`rounded-[32px] p-8.5 sm:p-10 relative flex flex-col justify-between transition-all duration-500 bg-[#120204]/90 border ${plan.color} ${plan.glow}`}
+              className={`rounded-[32px] p-8.5 sm:p-10 relative flex flex-col justify-between transition-all duration-500 hover:-translate-y-2.5 bg-[#120204]/90 border ${plan.color} ${plan.glow}`}
             >
               
               {/* Premium Top Badge/Ribbon */}
@@ -167,7 +166,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                 </button>
               </div>
 
-            </motion.div>
+            </div>
           ))}
         </div>
 

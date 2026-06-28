@@ -58,12 +58,11 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* LEFT: Video Showcase Card (col-span-5) */}
-          <motion.div 
-            whileHover={{ y: -6 }}
-            className="lg:col-span-5 rounded-[28px] overflow-hidden relative border border-white/5 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group min-h-[400px] flex flex-col justify-end p-8 sm:p-10"
+          <div 
+            className="lg:col-span-5 rounded-[28px] overflow-hidden relative border border-white/5 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group min-h-[400px] flex flex-col justify-end p-8 sm:p-10 hover:-translate-y-1.5 transition-transform duration-500 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop"
               alt="Elite Players Video"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-50"
               referrerPolicy="no-referrer"
@@ -90,15 +89,14 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
               </span>
               <h4 className="text-lg sm:text-xl font-black text-white">تغطية سينمائية لتدريبات النخبة المبردة بالرياض</h4>
             </div>
-          </motion.div>
+          </div>
 
           {/* RIGHT: 3 News Cards row (col-span-7) */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {newsItems.map((item, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                whileHover={{ y: -6 }}
-                className="bg-white/[0.02] border border-white/5 rounded-[28px] overflow-hidden shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-500 flex flex-col justify-between"
+                className="bg-white/[0.02] border border-white/5 rounded-[28px] overflow-hidden shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between"
               >
                 
                 {/* News Image Header */}
@@ -145,7 +143,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
                   </div>
                 </div>
 
-              </motion.div>
+              </div>
             ))}
           </div>
 

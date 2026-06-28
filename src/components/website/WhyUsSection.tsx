@@ -1,6 +1,5 @@
 import React from 'react';
 import { ShieldCheck, Award, BookOpen, Clock, Activity, Users, Shield, Trophy, CheckSquare } from 'lucide-react';
-import { motion } from 'motion/react';
 
 export const WhyUsSection: React.FC = () => {
   return (
@@ -22,7 +21,7 @@ export const WhyUsSection: React.FC = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">الأشوال أكاديمي؟</span>
           </h2>
           <p className="text-sm text-slate-400 font-semibold max-w-2xl mx-auto leading-relaxed">
-            نحن لا نقدم مجرد برامج لياقة اعتيادية؛ بل نؤسس لمسيرة حياة رياضية متكاملة تمنح البطل ثقة مطلقة وتصقل شخصيته السلوكية والبدنية.
+            نحن لا نقدم مجرد برامج لياقة اعتيادية； بل نؤسس لمسيرة حياة رياضية متكاملة تمنح البطل ثقة مطلقة وتصقل شخصيته السلوكية والبدنية.
           </p>
         </div>
 
@@ -30,9 +29,8 @@ export const WhyUsSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
           
           {/* Card 1: Large Bento Image Card with overlay text (Col-span 7) */}
-          <motion.div 
-            whileHover={{ y: -6 }}
-            className="md:col-span-7 rounded-[28px] overflow-hidden relative min-h-[400px] border border-white/10 group transition-all duration-500 shadow-2xl shadow-black/80"
+          <div 
+            className="md:col-span-7 rounded-[28px] overflow-hidden relative min-h-[400px] border border-white/10 group transition-all duration-500 hover:-translate-y-1.5 shadow-2xl shadow-black/80"
           >
             <img
               src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop"
@@ -53,12 +51,11 @@ export const WhyUsSection: React.FC = () => {
                 نهيئ لأبطالنا بيئة رياضية معقمة، مكيفة، وآمنة تضمن تجربة تمرين فخمة تليق بطموحهم الرياضي.
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Card 2: High Contrast Golden/Burgundy Glass Card (Col-span 5) */}
-          <motion.div 
-            whileHover={{ y: -6 }}
-            className="md:col-span-5 rounded-[28px] p-8 sm:p-10 glass-card luxury-border flex flex-col justify-between border border-white/5 shadow-2xl relative overflow-hidden"
+          <div 
+            className="md:col-span-5 rounded-[28px] p-8 sm:p-10 glass-card luxury-border flex flex-col justify-between border border-white/5 shadow-2xl relative overflow-hidden group hover:-translate-y-1.5 transition-all duration-500"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A0B17]/10 rounded-bl-full pointer-events-none" />
             
@@ -78,12 +75,11 @@ export const WhyUsSection: React.FC = () => {
               <span className="px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/5 text-slate-300 text-[10px] font-black">رخصة الاتحاد الآسيوي</span>
               <span className="px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/5 text-slate-300 text-[10px] font-black">وزارة الرياضة السعودية</span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Card 3: Performance & Health (Col-span 5) */}
-          <motion.div 
-            whileHover={{ y: -6 }}
-            className="md:col-span-5 rounded-[28px] p-8 sm:p-10 glass-card luxury-border flex flex-col justify-between border border-white/5 shadow-2xl"
+          <div 
+            className="md:col-span-5 rounded-[28px] p-8 sm:p-10 glass-card luxury-border flex flex-col justify-between border border-white/5 shadow-2xl hover:-translate-y-1.5 transition-transform duration-500"
           >
             <div className="space-y-6">
               <div className="w-14 h-14 rounded-2xl bg-white/[0.03] flex items-center justify-center border border-white/10 text-white">
@@ -102,12 +98,11 @@ export const WhyUsSection: React.FC = () => {
                 تحديثات أسبوعية لولي الأمر عبر البوابة الفورية
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Card 4: Editorial Image Card (Col-span 7) */}
-          <motion.div 
-            whileHover={{ y: -6 }}
-            className="md:col-span-7 rounded-[28px] overflow-hidden relative min-h-[400px] border border-white/10 group transition-all duration-500 shadow-2xl shadow-black/80"
+          <div 
+            className="md:col-span-7 rounded-[28px] overflow-hidden relative min-h-[400px] border border-white/10 group transition-all duration-500 hover:-translate-y-1.5 shadow-2xl shadow-black/80"
           >
             <img
               src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop"
@@ -128,7 +123,7 @@ export const WhyUsSection: React.FC = () => {
                 يقود الأبطال طواقم تدريب احترافية بمستويات رفيعة تركز على البناء المهاراتي الفردي والتأسيس السلوكي المتميز.
               </p>
             </div>
-          </motion.div>
+          </div>
 
         </div>
 

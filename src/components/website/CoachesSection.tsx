@@ -76,14 +76,10 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
             };
 
             return (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                viewport={{ once: true }}
+              <div
                 key={coach.id}
                 onClick={() => setSelectedCoach(coach)}
-                className="bg-white/[0.02] border border-white/5 hover:border-[#D4AF37]/50 rounded-[28px] p-6.5 shadow-2xl relative overflow-hidden group transition-all duration-500 hover:scale-[1.03] cursor-pointer"
+                className="bg-white/[0.02] border border-white/5 hover:border-[#D4AF37]/50 rounded-[28px] p-6.5 shadow-2xl relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] cursor-pointer"
               >
                 {/* Glowing light on hover */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5A0B17]/20 rounded-full blur-2xl group-hover:bg-[#5A0B17]/30 transition-all duration-500" />
@@ -133,7 +129,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
 
                 </div>
 
-              </motion.div>
+              </div>
             );
           })}
         </div>

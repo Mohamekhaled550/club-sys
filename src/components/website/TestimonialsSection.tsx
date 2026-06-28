@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Quote, Star, ChevronLeft, ChevronRight, MessageSquare, Sparkles } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
 
 export const TestimonialsSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);

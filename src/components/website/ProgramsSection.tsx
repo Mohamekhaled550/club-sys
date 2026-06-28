@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Activity, Award, Flame, Shield, Sparkles, Trophy, Users, Star } from 'lucide-react';
-import { motion } from 'motion/react';
 
 interface ProgramCard {
   title: string;
