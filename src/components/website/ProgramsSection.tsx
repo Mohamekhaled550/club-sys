@@ -26,7 +26,7 @@ export const ProgramsSection: React.FC = () => {
       desc: 'تعليم السباحة ومسافات الطويلة بمواصفات سلامة فائقة.',
       detail: 'تدريب احترافي، فلاتر مياه ذكية ومراقبة مستمرة بدرجة حرارة ملائمة ومثالية للأطفال.',
       icon: <Sparkles className="w-6 h-6 stroke-[1.5]" />,
-      imgUrl: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=400&auto=format&fit=crop'
+      imgUrl: 'https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=600&auto=format&fit=crop'
     },
     {
       title: 'صالة كرة السلة والتنس الذهبية',

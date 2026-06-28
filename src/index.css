@@ -26,6 +26,9 @@ body {
   overflow-x: hidden;
   background-color: #140708;
   color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Glassmorphism & Noise Classes */

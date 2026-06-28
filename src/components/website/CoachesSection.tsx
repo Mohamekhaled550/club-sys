@@ -97,6 +97,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                       alt={coach.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-95"
                       referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                     <div className="absolute bottom-3 right-3 left-3 flex justify-between items-center">
@@ -165,6 +166,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                       alt={selectedCoach.name}
                       className="w-16 h-16 rounded-2xl object-cover border-2 border-[#D4AF37]"
                       referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                     <div>
                       <span className="text-[#D4AF37] text-[10px] font-black tracking-widest uppercase block animate-pulse">المدرب النخبة معتمد</span>

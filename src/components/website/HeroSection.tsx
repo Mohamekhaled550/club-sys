@@ -99,13 +99,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <Zap className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
               أكاديمية النخبة الرياضية الأولى بالمملكة
             </div>
-            
-            <h2 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-serif font-black text-white leading-[1.05] tracking-tight">
-              نبني الأبطال <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-l from-white via-slate-200 to-[#D4AF37]">
-                للمنصات العالمية
-              </span>
-            </h2>
+
+            <div className="flex flex-col md:flex-row md:items-center gap-6 pt-2">
+              {/* Massive Prominent Elegant Academy Logo Badge next to the text */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex-shrink-0 self-start md:self-center p-3 rounded-[28px] bg-[#140708]/90 backdrop-blur-2xl border-2 border-[#B76E79]/40 hover:border-[#B76E79] shadow-[0_20px_50px_rgba(90,11,23,0.5)] hover:shadow-[0_25px_60px_rgba(183,110,121,0.3)] transition-all duration-300 group relative overflow-hidden"
+              >
+                {/* Subtle soft pulse glow inside the badge */}
+                <div className="absolute inset-0 bg-[#B76E79]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[28px] blur-sm animate-pulse" />
+                
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-[#B76E79]/20 shadow-inner bg-[#140708]/60 flex items-center justify-center p-1">
+                  <img 
+                    src="https://i.ibb.co/2YPYCr3m/image.jpg" 
+                    alt="شعار الأشوال أكاديمي" 
+                    className="w-full h-full object-contain scale-100 group-hover:scale-110 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                    loading="eager"
+                  />
+                </div>
+              </motion.div>
+
+              <div className="space-y-2">
+                <h2 className="text-4xl sm:text-5xl lg:text-[4.2rem] font-serif font-black text-white leading-[1.1] tracking-tight">
+                  الأشوال أكاديمي
+                </h2>
+                <h3 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-sans font-black text-transparent bg-clip-text bg-gradient-to-l from-white via-slate-200 to-[#D4AF37] leading-[1.1]">
+                  نبني الأبطال للمنصات العالمية
+                </h3>
+              </div>
+            </div>
           </motion.div>
 
           <motion.p 
@@ -187,7 +213,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#140708] to-transparent z-20 pointer-events-none hidden lg:block" />
             
             <img
-              src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92E8xY7Z96hqNpgJ6CGczBVurA3EZ_beO-cPRNDcguw&s=10"
               alt="Elite Football Player Action"
               className="w-full h-full object-cover rounded-[40px] shadow-[0_30px_80px_rgba(0,0,0,0.9)] transform -scale-x-100 opacity-90 border border-white/10 mix-blend-lighten select-none"
               referrerPolicy="no-referrer"

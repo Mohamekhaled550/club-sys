@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Play, Calendar, ChevronLeft, ArrowRight, Video, X, Trophy, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-export const EventsAndNewsSection: React.FC = () => {
+interface EventsAndNewsSectionProps {
+  onAddToast?: (text: string, type: 'success' | 'error' | 'info') => void;
+}
+
+export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAddToast }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const newsItems = [
@@ -63,6 +67,7 @@ export const EventsAndNewsSection: React.FC = () => {
               alt="Elite Players Video"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-50"
               referrerPolicy="no-referrer"
+              loading="lazy"
             />
             {/* Dark gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent z-10 pointer-events-none"></div>
@@ -103,6 +108,7 @@ export const EventsAndNewsSection: React.FC = () => {
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                   
@@ -124,7 +130,13 @@ export const EventsAndNewsSection: React.FC = () => {
 
                   <div className="pt-3 border-t border-white/5">
                     <button
-                      onClick={() => alert(`سيتم توجيهك قريباً لقراءة الخبر الحصري كاملاً بمدونة الأكاديمية.`)}
+                      onClick={() => {
+                        if (onAddToast) {
+                          onAddToast('سيتم توجيهك قريباً لقراءة الخبر الحصري كاملاً بمدونة الأكاديمية.', 'info');
+                        } else {
+                          console.log('سيتم توجيهك قريباً لقراءة الخبر الحصري كاملاً بمدونة الأكاديمية.');
+                        }
+                      }}
                       className="text-[#D4AF37] hover:text-white text-[10px] font-black flex items-center gap-1.5 hover:underline cursor-pointer"
                     >
                       تفاصيل التغطية
@@ -164,6 +176,7 @@ export const EventsAndNewsSection: React.FC = () => {
                   src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop"
                   alt="Live Streaming Pitch"
                   className="w-full h-full object-cover opacity-70"
+                  loading="lazy"
                 />
                 
                 {/* Visual video timeline overlay */}

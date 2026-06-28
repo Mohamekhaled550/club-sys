@@ -307,7 +307,7 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
       <BookingSection onAddToast={onAddToast} />
 
       {/* ================= 8. LATEST EVENTS & CHAMPIONSHIPS SECTION ================= */}
-      <EventsAndNewsSection />
+      <EventsAndNewsSection onAddToast={onAddToast} />
 
       {/* ================= 9. PREMIUM TESTIMONIALS CAROUSEL ================= */}
       <TestimonialsSection />
