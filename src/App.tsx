@@ -40,9 +40,12 @@ import { EquipmentView } from './components/EquipmentView';
 import { RentalsView } from './components/RentalsView';
 import { ReportsView } from './components/ReportsView';
 import { ToastsContainer, ToastMessage } from './components/ToastsContainer';
+import { WebsiteView } from './components/WebsiteView';
+import { ClientPortalView } from './components/ClientPortalView';
 
 export default function App() {
   // 1. حالات الصفحات والتنقل والمنصة
+  const [appMode, setAppMode] = useState<'website' | 'portal' | 'admin'>('website');
   const [currentPage, setCurrentPage] = useState<string>('splash');
   const [currentPlatform, setCurrentPlatform] = useState<'web' | 'mobile'>('web');
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -185,7 +188,34 @@ export default function App() {
       {/* سلة الإشعارات المنبثقة العامة */}
       <ToastsContainer toasts={toasts} removeToast={removeToast} />
 
-      {/* ========================================================= */}
+      {appMode === 'website' && (
+        <WebsiteView
+          onAddToast={addToast}
+          playersList={playersList}
+          setPlayersList={setPlayersList}
+          coachesList={coachesList}
+          subscriptionTypesList={subscriptionTypesList}
+          onNavigateToPortal={() => setAppMode('portal')}
+          onNavigateToAdmin={() => {
+            setAppMode('admin');
+            setCurrentPage('dashboard');
+          }}
+        />
+      )}
+
+      {appMode === 'portal' && (
+        <ClientPortalView
+          onAddToast={addToast}
+          playersList={playersList}
+          parentsList={parentsList}
+          coachesList={coachesList}
+          transactionsList={transactionsList}
+          onNavigateToWebsite={() => setAppMode('website')}
+        />
+      )}
+
+      {appMode === 'admin' && (
+        <>
       {/* 1. شاشة البداية والتحميل (SPLASH SCREEN) */}
       {/* ========================================================= */}
       {currentPage === 'splash' && (
@@ -428,8 +458,19 @@ export default function App() {
               </button>
             </div>
 
-            {/* مفتاح الوضع الليلي والنهاري وطلب تسجيل الخروج */}
+            {/* مفتاح الوضع الليلي والنهاري وطلب تسجيل الخروج والرجوع للموقع */}
             <div className="flex items-center gap-2">
+              <button
+                onClick={() => {
+                  setAppMode('website');
+                  addToast('تم الرجوع للموقع الإلكتروني التعريفي للأكاديمية.', 'info');
+                }}
+                className="flex items-center gap-1.5 px-3 py-2 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 hover:text-indigo-300 rounded-lg text-xs font-bold transition-all cursor-pointer"
+              >
+                <Globe className="w-4 h-4" />
+                الموقع الإلكتروني
+              </button>
+
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 className="p-2 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg transition-colors cursor-pointer"
@@ -1084,6 +1125,8 @@ export default function App() {
             </div>
           </div>
         </div>
+      )}
+      </>
       )}
 
     </div>
