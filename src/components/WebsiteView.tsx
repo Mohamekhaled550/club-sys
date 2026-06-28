@@ -42,7 +42,7 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
   onNavigateToPortal,
   onNavigateToAdmin
 }) => {
-  const [scrollY, setScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -50,7 +50,8 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      const scrolled = window.scrollY > 50;
+      setIsScrolled(scrolled);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -70,12 +71,12 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
     <div className="bg-[#140708] text-slate-100 min-h-screen selection:bg-[#B76E79] selection:text-slate-950 overflow-x-hidden text-right font-sans bg-noise">
       
       {/* Ambient background blur elements for the whole page */}
-      <div className="fixed top-[-200px] left-[-200px] w-[600px] h-[600px] bg-[#5A0B17]/10 rounded-full blur-[200px] pointer-events-none z-0" />
-      <div className="fixed bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-[#B76E79]/5 rounded-full blur-[250px] pointer-events-none z-0" />
+      <div className="fixed top-[-200px] left-[-200px] w-[600px] h-[600px] bg-[#5A0B17]/10 rounded-full blur-[200px] pointer-events-none z-0 transform-gpu will-change-transform" />
+      <div className="fixed bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-[#B76E79]/5 rounded-full blur-[250px] pointer-events-none z-0 transform-gpu will-change-transform" />
 
       {/* ================= STICKY HEADER WITH LUXURY GLASSMORPHISM ================= */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrollY > 50 
+        isScrolled 
           ? 'bg-[#140708]/90 backdrop-blur-3xl border-b border-[#B76E79]/15 shadow-[0_20px_50px_rgba(0,0,0,0.85)] py-4' 
           : 'bg-[#140708]/40 backdrop-blur-md border-b border-white/5 py-6'
       }`}>

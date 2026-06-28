@@ -66,13 +66,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       
       {/* ================= CINEMATIC STADIUM BACKDROP & LIGHT BEAMS ================= */}
       {/* Radial glow representing the stadium floodlights */}
-      <div className="absolute top-[-10%] left-[30%] w-[800px] h-[500px] bg-gradient-to-b from-[#D4AF37]/15 via-[#5A0B17]/10 to-transparent rounded-full blur-[160px] pointer-events-none z-0"></div>
-      <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#5A0B17]/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+      <div className="absolute top-[-10%] left-[30%] w-[800px] h-[500px] bg-gradient-to-b from-[#D4AF37]/15 via-[#5A0B17]/10 to-transparent rounded-full blur-[160px] pointer-events-none z-0 transform-gpu"></div>
+      <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#5A0B17]/15 rounded-full blur-[140px] pointer-events-none z-0 transform-gpu"></div>
       
       {/* Diagonal Light Beams (Stadium Atmosphere) */}
       <div className="absolute inset-0 opacity-25 pointer-events-none z-0 mix-blend-screen overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-[35%] h-[150%] bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent transform rotate-[35deg] blur-[80px]"></div>
-        <div className="absolute top-[-10%] right-[15%] w-[25%] h-[150%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform rotate-[25deg] blur-[100px]"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[35%] h-[150%] bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent transform rotate-[35deg] blur-[80px] transform-gpu"></div>
+        <div className="absolute top-[-10%] right-[15%] w-[25%] h-[150%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform rotate-[25deg] blur-[100px] transform-gpu"></div>
       </div>
 
       {/* Subtle Dust / Grass Particle Simulation */}

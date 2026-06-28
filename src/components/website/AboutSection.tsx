@@ -7,8 +7,8 @@ export const AboutSection: React.FC = () => {
     <section id="about" className="relative py-32 bg-[#19090B] text-right overflow-hidden border-t border-white/5 bg-noise">
       
       {/* Visual luxury accent glows */}
-      <div className="absolute top-[20%] left-[-15%] w-[500px] h-[500px] bg-[#5A0B17]/25 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="absolute top-[20%] left-[-15%] w-[500px] h-[500px] bg-[#5A0B17]/25 rounded-full blur-[140px] pointer-events-none z-0 transform-gpu" />
+      <div className="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[160px] pointer-events-none z-0 transform-gpu" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         

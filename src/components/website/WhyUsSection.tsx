@@ -7,8 +7,8 @@ export const WhyUsSection: React.FC = () => {
     <section id="why-us" className="relative py-32 bg-[#24090E] text-right border-t border-white/5 bg-noise overflow-hidden">
       
       {/* Dynamic blurred shape overlays simulating high-end smoke & Vignette */}
-      <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#5A0B17]/25 rounded-full blur-[150px] pointer-events-none z-0" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[130px] pointer-events-none z-0" />
+      <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#5A0B17]/25 rounded-full blur-[150px] pointer-events-none z-0 transform-gpu" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[130px] pointer-events-none z-0 transform-gpu" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
