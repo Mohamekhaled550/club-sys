@@ -43,7 +43,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block animate-pulse">
+          <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block animate-pulse">
             الملتقيات والبطولات الرسمية للأشوال
           </span>
           <h2 className="text-4xl sm:text-6xl font-serif font-black text-white leading-tight">
@@ -75,7 +75,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <button
                 onClick={() => setIsVideoOpen(true)}
-                className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:bg-[#5A0B17] hover:border-[#D4AF37] shadow-2xl cursor-pointer"
+                className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:bg-[#5A0B17] hover:border-[#B76E79]/50 shadow-2xl cursor-pointer"
                 aria-label="تشغيل البث التدريبي"
               >
                 <Play className="w-7 h-7 fill-white ml-1.5 flip-horizontal text-white" />
@@ -84,7 +84,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
 
             {/* Video title overlay */}
             <div className="relative z-20 text-right space-y-2">
-              <span className="bg-[#D4AF37] text-slate-950 text-[9px] font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block border border-[#D4AF37]/45 shadow-lg">
+              <span className="bg-[#5A0B17] text-white text-[9px] font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block border border-[#B76E79]/30 shadow-lg">
                 البث الوثائقي الفاخر
               </span>
               <h4 className="text-lg sm:text-xl font-black text-white">تغطية سينمائية لتدريبات النخبة المبردة بالرياض</h4>
@@ -96,7 +96,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
             {newsItems.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white/[0.02] border border-white/5 rounded-[28px] overflow-hidden shadow-2xl group hover:border-[#D4AF37]/50 transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between"
+                className="bg-white/[0.02] border border-white/5 rounded-[28px] overflow-hidden shadow-2xl group hover:border-[#B76E79]/45 transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between"
               >
                 
                 {/* News Image Header */}
@@ -111,7 +111,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                   
                   {/* Date Badge over image */}
-                  <div className="absolute top-4 right-4 bg-[#5A0B17] border border-[#D4AF37]/30 text-white text-[9px] font-black px-3 py-1 rounded-lg">
+                  <div className="absolute top-4 right-4 bg-[#5A0B17] border border-[#B76E79]/30 text-white text-[9px] font-black px-3 py-1 rounded-lg">
                     {item.date}
                   </div>
                 </div>
@@ -119,8 +119,8 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
                 {/* News Copy */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2">
-                    <span className="text-[#D4AF37] text-[10px] font-black tracking-widest uppercase block">{item.tag}</span>
-                    <h4 className="text-sm font-black text-white group-hover:text-[#D4AF37] transition-colors leading-relaxed">
+                    <span className="text-[#E5D4C0] text-[10px] font-black tracking-widest uppercase block">{item.tag}</span>
+                    <h4 className="text-sm font-black text-white group-hover:text-[#E5D4C0] transition-colors leading-relaxed">
                       {item.title}
                     </h4>
                     <p className="text-[11px] text-slate-400 font-semibold leading-relaxed line-clamp-3">{item.desc}</p>
@@ -135,7 +135,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
                           console.log('سيتم توجيهك قريباً لقراءة الخبر الحصري كاملاً بمدونة الأكاديمية.');
                         }
                       }}
-                      className="text-[#D4AF37] hover:text-white text-[10px] font-black flex items-center gap-1.5 hover:underline cursor-pointer"
+                      className="text-[#E5D4C0] hover:text-white text-[10px] font-black flex items-center gap-1.5 hover:underline cursor-pointer"
                     >
                       تفاصيل التغطية
                       <ChevronLeft className="w-3.5 h-3.5" />
@@ -159,7 +159,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-slate-950 border border-[#D4AF37]/45 w-full max-w-3xl rounded-[32px] overflow-hidden relative shadow-2xl shadow-black p-1"
+              className="bg-slate-950 border border-[#B76E79]/35 w-full max-w-3xl rounded-[32px] overflow-hidden relative shadow-2xl shadow-black p-1"
             >
               <button
                 onClick={() => setIsVideoOpen(false)}
@@ -188,7 +188,7 @@ export const EventsAndNewsSection: React.FC<EventsAndNewsSectionProps> = ({ onAd
                   {/* Fake controls */}
                   <div className="flex items-center gap-4 text-xs pt-1">
                     <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
-                      <div className="w-1/3 h-full bg-[#D4AF37]" />
+                      <div className="w-1/3 h-full bg-[#E5D4C0]" />
                     </div>
                     <span className="text-[10px] font-mono text-slate-300">03:45 / 12:00</span>
                   </div>

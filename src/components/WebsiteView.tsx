@@ -247,7 +247,7 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
                   transition={{ delay: idx * 0.05 }}
                   key={link.id}
                   onClick={() => handleSmoothScroll(link.id)}
-                  className="w-full py-4 px-6 rounded-2xl text-sm font-black text-slate-200 hover:text-[#D4AF37] hover:bg-[#5A0B17]/20 transition-all border border-white/5 flex justify-between items-center"
+                  className="w-full py-4 px-6 rounded-2xl text-sm font-black text-slate-200 hover:text-[#E5D4C0] hover:bg-[#5A0B17]/20 transition-all border border-white/5 flex justify-between items-center"
                 >
                   <ArrowLeft className="w-4 h-4 text-slate-500" />
                   <span>{link.label}</span>
@@ -261,9 +261,9 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
                   setMobileMenuOpen(false);
                   onNavigateToPortal();
                 }}
-                className="w-full py-4 bg-[#5A0B17]/20 hover:bg-[#5A0B17]/40 border border-[#D4AF37]/30 text-white font-black rounded-xl text-xs flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 bg-[#5A0B17]/20 hover:bg-[#5A0B17]/45 border border-[#B76E79]/30 text-white font-black rounded-xl text-xs flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Smartphone className="w-4 h-4 text-[#D4AF37]" />
+                <Smartphone className="w-4 h-4 text-[#E5D4C0]" />
                 بوابة ولي الأمر (Portal)
               </button>
               <button
@@ -271,7 +271,7 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
                   setMobileMenuOpen(false);
                   onNavigateToAdmin();
                 }}
-                className="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] text-slate-950 font-black rounded-xl text-xs flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white border border-[#B76E79]/30 hover:from-[#6E1120] hover:to-[#961e31] hover:border-[#B76E79]/50 font-black rounded-xl text-xs flex items-center justify-center gap-2 cursor-pointer shadow-lg"
               >
                 لوحة الإدارة الفنية (ERP)
               </button>
@@ -325,14 +325,14 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
         
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 space-y-10">
           
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5A0B17]/30 border border-[#D4AF37]/35 text-[#D4AF37] text-xs font-black tracking-widest uppercase mb-2 animate-pulse">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5A0B17]/40 border border-[#B76E79]/35 text-[#E5D4C0] text-xs font-black tracking-widest uppercase mb-2 animate-pulse">
             <Trophy className="w-3.5 h-3.5" />
             انضم لصفوة الرياضيين بالمملكة
           </div>
           
           <h2 className="text-4xl sm:text-6xl font-black text-white leading-tight">
             هل أنت جاهز لتصنع بطلاً <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-white via-[#D4AF37] to-amber-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-l from-white via-[#E5D4C0] to-white">
               يقهر التحديات؟
             </span>
           </h2>
@@ -344,14 +344,14 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
           <div className="flex flex-wrap justify-center gap-5 pt-6">
             <button
               onClick={() => handleSmoothScroll('home')}
-              className="px-10 py-5 bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#AA7C11] text-slate-950 font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_15px_30px_rgba(212,175,55,0.25)] hover:shadow-[0_20px_40px_rgba(212,175,55,0.4)] cursor-pointer flex items-center gap-2"
+              className="px-10 py-5 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white border border-[#B76E79]/30 hover:from-[#6E1120] hover:to-[#961e31] hover:border-[#B76E79]/50 font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_15px_30px_rgba(90,11,23,0.35)] hover:shadow-[0_20px_40px_rgba(90,11,23,0.5)] cursor-pointer flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4" />
               حجز تجربة مجانية للبطل الآن
             </button>
             <button
               onClick={() => handleSmoothScroll('pricing')}
-              className="px-10 py-5 bg-[#5A0B17]/20 hover:bg-[#5A0B17]/40 border border-[#D4AF37]/30 hover:border-[#D4AF37] text-white font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="px-10 py-5 bg-[#5A0B17]/20 hover:bg-[#5A0B17]/40 border border-[#B76E79]/30 hover:border-[#B76E79] text-white font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               استعراض باقات العضوية والاشتراكات
             </button>

@@ -47,13 +47,13 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
       
       {/* Decorative Blur and Spotlights */}
       <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#5A0B17]/15 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-[#B76E79]/5 rounded-full blur-[160px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Editorial Title */}
         <div className="max-w-3xl mx-auto text-center mb-24 space-y-4">
-          <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block animate-pulse">
+          <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block animate-pulse">
             صناع الأبطال | المدربون النخبة
           </span>
           <h2 className="text-4xl sm:text-6xl font-serif font-black text-white leading-tight">
@@ -79,7 +79,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
               <div
                 key={coach.id}
                 onClick={() => setSelectedCoach(coach)}
-                className="bg-white/[0.02] border border-white/5 hover:border-[#D4AF37]/50 rounded-[28px] p-6.5 shadow-2xl relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] cursor-pointer"
+                className="bg-white/[0.02] border border-white/5 hover:border-[#B76E79]/50 rounded-[28px] p-6.5 shadow-2xl relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] cursor-pointer"
               >
                 {/* Glowing light on hover */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5A0B17]/20 rounded-full blur-2xl group-hover:bg-[#5A0B17]/30 transition-all duration-500" />
@@ -97,11 +97,11 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                     <div className="absolute bottom-3 right-3 left-3 flex justify-between items-center">
-                      <div className="px-2.5 py-1 rounded bg-[#5A0B17]/90 text-white text-[9px] font-black border border-[#D4AF37]/25">
+                      <div className="px-2.5 py-1 rounded bg-[#5A0B17]/90 text-white text-[9px] font-black border border-[#B76E79]/30">
                         {coach.specialty}
                       </div>
-                      <div className="px-2.5 py-1 rounded bg-slate-950/80 text-[#D4AF37] text-[9px] font-black border border-[#D4AF37]/20 flex items-center gap-0.5">
-                        <Star className="w-2.5 h-2.5 fill-[#D4AF37]" />
+                      <div className="px-2.5 py-1 rounded bg-slate-950/80 text-[#E5D4C0] text-[9px] font-black border border-[#B76E79]/20 flex items-center gap-0.5">
+                        <Star className="w-2.5 h-2.5 fill-[#E5D4C0]" />
                         {portfolio.rating}
                       </div>
                     </div>
@@ -109,7 +109,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
 
                   {/* Specialty Game Badge */}
                   <div className="space-y-2">
-                    <h3 className="text-lg font-black text-white group-hover:text-[#D4AF37] transition-colors">{coach.name}</h3>
+                    <h3 className="text-lg font-black text-white group-hover:text-[#E5D4C0] transition-colors">{coach.name}</h3>
                     <p className="text-xs text-slate-400 font-bold tracking-wider">{coach.specialty} | خبرة {portfolio.experienceYears} سنة</p>
                   </div>
 
@@ -121,7 +121,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                   {/* Action link */}
                   <div className="border-t border-white/5 pt-4 flex items-center justify-between">
                     <span className="text-[10px] text-slate-500 font-black">طاقم تدريب النخبة</span>
-                    <span className="text-[11px] text-[#D4AF37] font-black flex items-center gap-1 group-hover:underline">
+                    <span className="text-[11px] text-[#E5D4C0] font-black flex items-center gap-1 group-hover:underline">
                       الملف الشخصي
                       <ChevronLeft className="w-3.5 h-3.5" />
                     </span>
@@ -143,7 +143,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="bg-[#120204]/95 border border-[#D4AF37]/40 w-full max-w-lg rounded-[32px] p-8 relative shadow-2xl shadow-black bg-noise"
+                className="bg-[#120204]/95 border border-[#B76E79]/40 w-full max-w-lg rounded-[32px] p-8 relative shadow-2xl shadow-black bg-noise"
               >
                 
                 <button
@@ -160,12 +160,12 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                     <img
                       src={(coachPortfolios[selectedCoach.name] || { img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop' }).img}
                       alt={selectedCoach.name}
-                      className="w-16 h-16 rounded-2xl object-cover border-2 border-[#D4AF37]"
+                      className="w-16 h-16 rounded-2xl object-cover border-2 border-[#B76E79]/60"
                       referrerPolicy="no-referrer"
                       loading="lazy"
                     />
                     <div>
-                      <span className="text-[#D4AF37] text-[10px] font-black tracking-widest uppercase block animate-pulse">المدرب النخبة معتمد</span>
+                      <span className="text-[#E5D4C0] text-[10px] font-black tracking-widest uppercase block animate-pulse">المدرب النخبة معتمد</span>
                       <h3 className="text-xl font-black text-white">{selectedCoach.name}</h3>
                       <p className="text-xs text-slate-400 font-semibold">{selectedCoach.specialty}</p>
                     </div>
@@ -184,7 +184,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                     <h4 className="text-xs text-slate-400 font-black">الشهادات والاعتمادات والجوائز</h4>
                     <div className="flex flex-wrap gap-2 pt-1">
                       {(coachPortfolios[selectedCoach.name] || { badges: ['شهادة فنية معتمدة'] }).badges.map((badge, bidx) => (
-                        <span key={bidx} className="px-3 py-1.5 rounded-lg bg-[#5A0B17]/40 border border-[#D4AF37]/35 text-[#D4AF37] text-xs font-black">
+                        <span key={bidx} className="px-3 py-1.5 rounded-lg bg-[#5A0B17]/40 border border-[#B76E79]/35 text-[#E5D4C0] text-xs font-black">
                           {badge}
                         </span>
                       ))}
@@ -201,8 +201,8 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-400 block font-bold">التقييم الفني المعتمد</span>
-                      <span className="text-sm sm:text-base font-black text-[#D4AF37] flex items-center gap-1 justify-end">
-                        <Star className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                      <span className="text-sm sm:text-base font-black text-[#E5D4C0] flex items-center gap-1 justify-end">
+                        <Star className="w-4 h-4 fill-[#E5D4C0] text-[#E5D4C0]" />
                         {(coachPortfolios[selectedCoach.name] || { rating: 5 }).rating} / ٥
                       </span>
                     </div>
@@ -215,7 +215,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ coachesList }) =
                         window.open('https://wa.me/966500000000', '_blank');
                         setSelectedCoach(null);
                       }}
-                      className="flex-1 py-4 bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#AA7C11] text-slate-950 font-black rounded-xl text-xs sm:text-sm hover:scale-[1.02] transition-transform cursor-pointer"
+                      className="flex-1 py-4 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white border border-[#B76E79]/30 hover:from-[#6E1120] hover:to-[#961e31] hover:border-[#B76E79]/50 font-black rounded-xl text-xs sm:text-sm hover:scale-[1.02] transition-transform cursor-pointer shadow-lg"
                     >
                       طلب موعد استشارة وتحديد مستوى
                     </button>

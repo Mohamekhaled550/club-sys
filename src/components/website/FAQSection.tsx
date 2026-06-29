@@ -40,7 +40,7 @@ export const FAQSection: React.FC = () => {
         
         {/* Title */}
         <div className="text-center space-y-4 mb-16">
-          <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block animate-pulse">
+          <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block animate-pulse">
             الاستفسارات الشائعة | الدعم والإرشاد الشامل
           </span>
           <h2 className="text-4xl sm:text-6xl font-serif font-black text-white leading-tight">
@@ -58,7 +58,7 @@ export const FAQSection: React.FC = () => {
             placeholder="ابحث هنا عن سؤالك الرياضي..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-xs text-white text-right focus:border-[#D4AF37] outline-none transition-all placeholder:text-slate-500 font-semibold"
+            className="w-full px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-xs text-white text-right focus:border-[#B76E79]/40 outline-none transition-all placeholder:text-slate-500 font-semibold"
           />
         </div>
 
@@ -70,19 +70,19 @@ export const FAQSection: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-white/[0.02] border border-white/5 hover:border-[#D4AF37]/45 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl"
+                  className="bg-white/[0.02] border border-white/5 hover:border-[#B76E79]/45 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl"
                 >
                   
                   {/* Accordion Header */}
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : idx)}
-                    className="w-full p-5 sm:p-6 text-right flex items-center justify-between gap-4 text-xs sm:text-sm font-black text-white hover:text-[#D4AF37] transition-all cursor-pointer"
+                    className="w-full p-5 sm:p-6 text-right flex items-center justify-between gap-4 text-xs sm:text-sm font-black text-white hover:text-[#E5D4C0] transition-all cursor-pointer"
                   >
                     <span className="flex items-center gap-2.5 text-right font-sans">
-                      <HelpCircle className="w-5 h-5 text-[#D4AF37] shrink-0" />
+                      <HelpCircle className="w-5 h-5 text-[#E5D4C0] shrink-0" />
                       {faq.q}
                     </span>
-                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#D4AF37]' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#E5D4C0]' : ''}`} />
                   </button>
 
                   {/* Accordion Content */}

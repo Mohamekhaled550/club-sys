@@ -57,8 +57,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
         'أطقم رياضية فاخرة ومخصصة للبطل'
       ],
       isPopular: true,
-      color: 'border-[#D4AF37]/45',
-      glow: 'shadow-[0_20px_50px_rgba(90,11,23,0.4)] ring-1 ring-[#D4AF37]/25'
+      color: 'border-[#B76E79]/45',
+      glow: 'shadow-[0_20px_50px_rgba(90,11,23,0.4)] ring-1 ring-[#B76E79]/25'
     },
     {
       name: 'عضوية الـ VIP البلاتينية',
@@ -99,7 +99,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
         
         {/* Header copy */}
         <div className="max-w-3xl mx-auto text-center mb-24 space-y-4">
-          <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block animate-pulse">
+          <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block animate-pulse">
             باقات العضوية والاشتراكات الفاخرة
           </span>
           <h2 className="text-4xl sm:text-6xl font-serif font-black text-white leading-tight">
@@ -119,8 +119,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
             >
               
               {/* Premium Top Badge/Ribbon */}
-              <div className="absolute -top-3.5 right-6 flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#5A0B17] border border-[#D4AF37]/45 text-[#D4AF37] text-[9px] font-black uppercase tracking-widest shadow-xl">
-                <Sparkles className="w-3 h-3 text-[#D4AF37] animate-pulse" />
+              <div className="absolute -top-3.5 right-6 flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#5A0B17] border border-[#B76E79]/35 text-[#E5D4C0] text-[9px] font-black uppercase tracking-widest shadow-xl">
+                <Sparkles className="w-3 h-3 text-[#E5D4C0] animate-pulse" />
                 {plan.badge}
               </div>
 
@@ -135,7 +135,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                 <div className="py-2">
                   <span className="text-sm text-slate-500 block font-bold">قيمة العضوية والاستثمار</span>
                   <div className="flex items-baseline gap-1.5 mt-1">
-                    <h3 className="text-5xl font-black text-[#D4AF37] font-sans leading-none">{plan.price}</h3>
+                    <h3 className="text-5xl font-black text-[#E5D4C0] font-sans leading-none">{plan.price}</h3>
                     <span className="text-sm text-slate-300 font-black">ر.س / {plan.period}</span>
                   </div>
                   <span className="text-[10px] text-slate-500 block mt-1 font-semibold">شامل القيمة المضافة لجميع الحصص</span>
@@ -146,7 +146,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                   {plan.bullets.map((bullet, bulletIdx) => (
                     <li key={bulletIdx} className="flex items-start gap-3 justify-end text-right">
                       <span>{bullet}</span>
-                      <ShieldCheck className="w-5 h-5 text-[#D4AF37] shrink-0 stroke-[1.5]" />
+                      <ShieldCheck className="w-5 h-5 text-[#E5D4C0] shrink-0 stroke-[1.5]" />
                     </li>
                   ))}
                 </ul>
@@ -158,7 +158,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                   onClick={() => setSelectedPlan(plan.name)}
                   className={`w-full py-4.5 rounded-2xl text-xs sm:text-sm font-black transition-all duration-300 cursor-pointer ${
                     plan.isPopular
-                      ? 'bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#AA7C11] text-slate-950 shadow-[0_15px_30px_rgba(212,175,55,0.2)]'
+                      ? 'bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white shadow-[0_15px_30px_rgba(90,11,23,0.3)] border border-[#B76E79]/30 hover:border-[#B76E79]/60'
                       : 'bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 hover:text-white'
                   }`}
                 >
@@ -175,7 +175,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
           <div className="absolute top-0 left-0 w-32 h-32 bg-[#5A0B17]/10 rounded-br-full blur-2xl pointer-events-none" />
           
           <h3 className="text-xl sm:text-2xl font-black text-white mb-8 flex items-center gap-2">
-            <Award className="w-6 h-6 text-[#D4AF37]" />
+            <Award className="w-6 h-6 text-[#E5D4C0]" />
             جدول مقارنة الامتيازات والمنافع الكاملة
           </h3>
 
@@ -185,7 +185,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                 <tr className="border-b border-white/10 text-white font-black text-xs sm:text-sm">
                   <th className="pb-4 pr-2">ميزات العضويات</th>
                   <th className="pb-4 text-slate-400">العضوية الذهبية</th>
-                  <th className="pb-4 text-[#D4AF37]">عضوية النخبة</th>
+                  <th className="pb-4 text-[#E5D4C0]">عضوية النخبة</th>
                   <th className="pb-4 text-white">الـ VIP البلاتينية</th>
                 </tr>
               </thead>
@@ -194,7 +194,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                   <tr key={idx} className="hover:bg-white/[0.01] transition-colors">
                     <td className="py-4 pr-2 font-black text-white">{f.name}</td>
                     <td className="py-4 text-slate-300">{f.basic}</td>
-                    <td className="py-4 text-[#D4AF37] font-bold">{f.elite}</td>
+                    <td className="py-4 text-[#E5D4C0] font-bold">{f.elite}</td>
                     <td className="py-4 text-white font-black">{f.vip}</td>
                   </tr>
                 ))}
@@ -213,7 +213,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-gradient-to-b from-[#1C080B] to-[#120204] border border-[#D4AF37]/40 rounded-[32px] p-8 w-full max-w-md shadow-2xl text-right relative bg-noise overflow-hidden"
+              className="bg-gradient-to-b from-[#1C080B] to-[#120204] border border-[#B76E79]/35 rounded-[32px] p-8 w-full max-w-md shadow-2xl text-right relative bg-noise overflow-hidden"
             >
               {/* Decorative inner blur */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A0B17]/20 rounded-full blur-2xl pointer-events-none" />
@@ -227,7 +227,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
 
               <div className="space-y-6">
                 <div>
-                  <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block mb-1">طلب انضمام رياضي فاخر</span>
+                  <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block mb-1">طلب انضمام رياضي فاخر</span>
                   <h3 className="text-2xl font-black text-white font-serif">العضوية: {selectedPlan}</h3>
                   <p className="text-xs text-slate-400 mt-1">سيتم تفعيل بوابة ولي الأمر ورقم التسجيل فور اعتماد الطلب من الإدارة.</p>
                 </div>
@@ -241,7 +241,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                       placeholder="مثال: تركي بن رائد الأشول"
                       value={checkoutName}
                       onChange={e => setCheckoutName(e.target.value)}
-                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#D4AF37] text-white outline-none transition-all focus:bg-slate-950"
+                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#B76E79]/55 text-white outline-none transition-all focus:bg-slate-950"
                     />
                   </div>
                   
@@ -253,12 +253,12 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
                       placeholder="05xxxxxxxx"
                       value={checkoutPhone}
                       onChange={e => setCheckoutPhone(e.target.value)}
-                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#D4AF37] text-white outline-none transition-all focus:bg-slate-950"
+                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#B76E79]/55 text-white outline-none transition-all focus:bg-slate-950"
                     />
                   </div>
 
-                  <div className="p-4 bg-[#5A0B17]/30 border border-[#D4AF37]/30 rounded-2xl flex items-start gap-2.5">
-                    <Shield className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
+                  <div className="p-4 bg-[#5A0B17]/30 border border-[#B76E79]/25 rounded-2xl flex items-start gap-2.5">
+                    <Shield className="w-5 h-5 text-[#E5D4C0] shrink-0 mt-0.5" />
                     <p className="text-[10px] text-slate-300 leading-relaxed font-semibold">
                       عقود عضوية الأشوال معتمدة، وتمنح ولي الأمر واللاعب وصولاً غير محدود لجميع فروعنا بمجرد السداد وإصدار بطاقة النخبة الذكية.
                     </p>
@@ -266,10 +266,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ subscriptionType
 
                   <button
                     onClick={() => handleSubscribeClick(selectedPlan)}
-                    className="w-full py-4.5 bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#AA7C11] text-slate-950 font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-xl flex items-center justify-center gap-2"
+                    className="w-full py-4.5 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white font-black rounded-2xl text-xs sm:text-sm border border-[#B76E79]/30 hover:border-[#B76E79]/50 transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-xl flex items-center justify-center gap-2"
                   >
                     إرسال طلب العضوية وتأكيد المقعد
-                    <ArrowRight className="w-4 h-4 text-slate-950" />
+                    <ArrowRight className="w-4 h-4 text-[#E5D4C0]" />
                   </button>
                 </div>
               </div>

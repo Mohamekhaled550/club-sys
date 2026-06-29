@@ -56,19 +56,19 @@ export const ProgramsSection: React.FC = () => {
       
       {/* Decorative Glow Elements */}
       <div className="absolute top-[30%] left-[25%] w-96 h-96 bg-[#5A0B17]/20 rounded-full blur-[150px] pointer-events-none z-0" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[130px] pointer-events-none z-0" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] bg-[#B76E79]/5 rounded-full blur-[130px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
           <div className="lg:col-span-8 space-y-4">
-            <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block animate-pulse">
+            <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block animate-pulse">
               برامج الأبطال الرياضية الفاخرة
             </span>
             <h2 className="text-4xl sm:text-6xl font-serif font-black text-white leading-tight">
               أكاديميات تخصصية <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E5D4C0] to-white">
                 بقيادة نخبة المدربين
               </span>
             </h2>
@@ -76,14 +76,14 @@ export const ProgramsSection: React.FC = () => {
           <div className="lg:col-span-4 flex items-center justify-start lg:justify-end gap-3 lg:pb-3">
             <button
               onClick={handlePrev}
-              className="p-4 bg-white/[0.03] hover:bg-[#5A0B17]/40 border border-white/10 hover:border-[#D4AF37] rounded-full text-white transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer shadow-lg"
+              className="p-4 bg-white/[0.03] hover:bg-[#5A0B17]/40 border border-white/10 hover:border-[#B76E79]/50 rounded-full text-white transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer shadow-lg"
               aria-label="السابق"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
             <button
               onClick={handleNext}
-              className="p-4 bg-white/[0.03] hover:bg-[#5A0B17]/40 border border-white/10 hover:border-[#D4AF37] rounded-full text-white transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer shadow-lg"
+              className="p-4 bg-white/[0.03] hover:bg-[#5A0B17]/40 border border-white/10 hover:border-[#B76E79]/50 rounded-full text-white transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer shadow-lg"
               aria-label="التالي"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -108,12 +108,12 @@ export const ProgramsSection: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#140708] via-[#140708]/40 to-transparent z-10 pointer-events-none" />
 
             <div className="relative z-20 space-y-5">
-              <div className="w-14 h-14 rounded-2xl bg-slate-950/80 border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] shadow-xl">
+              <div className="w-14 h-14 rounded-2xl bg-slate-950/80 border border-[#B76E79]/30 flex items-center justify-center text-[#E5D4C0] shadow-xl">
                 {programs[startIndex].icon}
               </div>
 
               <div className="space-y-3">
-                <span className="text-[#D4AF37] text-[10px] font-black tracking-widest uppercase block animate-pulse">
+                <span className="text-[#E5D4C0] text-[10px] font-black tracking-widest uppercase block animate-pulse">
                   البرنامج الفاخر الأكثر طلباً
                 </span>
                 <h3 className="text-2xl sm:text-4xl font-black text-white font-sans leading-tight">
@@ -130,7 +130,7 @@ export const ProgramsSection: React.FC = () => {
                     const element = document.getElementById('pricing');
                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="px-8 py-4.5 bg-[#5A0B17]/40 hover:bg-[#5A0B17]/80 border border-[#D4AF37]/40 hover:border-[#D4AF37] text-white font-black rounded-xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 cursor-pointer backdrop-blur-md shadow-xl flex items-center gap-2"
+                  className="px-8 py-4.5 bg-[#5A0B17]/40 hover:bg-[#5A0B17]/80 border border-[#B76E79]/35 hover:border-[#B76E79]/60 text-white font-black rounded-xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 cursor-pointer backdrop-blur-md shadow-xl flex items-center gap-2"
                 >
                   حجز مقعد واستعراض باقات الاشتراك
                 </button>
@@ -149,13 +149,13 @@ export const ProgramsSection: React.FC = () => {
                   onClick={() => setStartIndex(idx)}
                   className={`p-6 sm:p-8 rounded-[28px] border cursor-pointer transition-all duration-500 flex items-center gap-6 relative overflow-hidden ${
                     isSelected 
-                      ? 'bg-gradient-to-br from-[#1E090B] to-[#5A0B17]/40 border-[#D4AF37]/65 shadow-2xl' 
+                      ? 'bg-gradient-to-br from-[#1E090B] to-[#5A0B17]/40 border-[#B76E79]/50 shadow-2xl' 
                       : 'bg-white/[0.02] border-white/5 hover:border-white/15'
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-colors shrink-0 ${
                     isSelected 
-                      ? 'bg-[#D4AF37] text-slate-950 border-[#D4AF37]' 
+                      ? 'bg-[#5A0B17] text-white border-[#B76E79]/30' 
                       : 'bg-white/5 text-slate-300 border-white/5'
                   }`}>
                     {prog.icon}
@@ -168,7 +168,7 @@ export const ProgramsSection: React.FC = () => {
 
                   {isSelected && (
                     <div className="absolute top-4 left-4">
-                      <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                      <Star className="w-4 h-4 text-[#E5D4C0] fill-[#E5D4C0]" />
                     </div>
                   )}
                 </div>

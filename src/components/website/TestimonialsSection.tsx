@@ -48,7 +48,7 @@ export const TestimonialsSection: React.FC = () => {
         
         {/* Title */}
         <div className="max-w-3xl mx-auto text-center mb-24 space-y-4">
-          <span className="text-[#D4AF37] text-xs font-black tracking-widest uppercase block animate-pulse">
+          <span className="text-[#E5D4C0] text-xs font-black tracking-widest uppercase block animate-pulse">
             شركاء الإنجاز والمسيرة الرياضية المستدامة
           </span>
           <h2 className="text-4xl sm:text-6xl font-serif font-black text-white leading-tight">
@@ -67,16 +67,16 @@ export const TestimonialsSection: React.FC = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A0B17]/10 rounded-bl-full pointer-events-none" />
 
             {/* Quote Icon overlay */}
-            <Quote className="absolute top-10 left-10 w-16 h-16 text-[#D4AF37]/10 flip-horizontal stroke-[1.2]" />
+            <Quote className="absolute top-10 left-10 w-16 h-16 text-[#E5D4C0]/10 flip-horizontal stroke-[1.2]" />
 
             <div className="space-y-8 relative z-10">
               
               {/* Rating stars */}
               <div className="flex items-center gap-1.5 justify-end">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
+                  <Star key={i} className="w-5 h-5 text-[#E5D4C0] fill-[#E5D4C0]" />
                 ))}
-                <span className="text-xs text-[#D4AF37] font-black mr-2.5">عضوية معتمدة وتقييم ممتاز ٥/٥</span>
+                <span className="text-xs text-[#E5D4C0] font-black mr-2.5">عضوية معتمدة وتقييم ممتاز ٥/٥</span>
               </div>
 
               {/* Comment text */}
@@ -88,12 +88,12 @@ export const TestimonialsSection: React.FC = () => {
               <div className="flex items-center gap-5 border-t border-white/5 pt-8 justify-end">
                 <div className="text-right">
                   <h4 className="text-base sm:text-lg font-black text-white">{current.name}</h4>
-                  <span className="text-xs text-[#D4AF37] font-black block mt-1">{current.role}</span>
+                  <span className="text-xs text-[#E5D4C0] font-black block mt-1">{current.role}</span>
                 </div>
                 <img
                   src={current.avatar}
                   alt={current.name}
-                  className="w-14 h-14 rounded-2xl object-cover border-2 border-[#D4AF37] shadow-xl"
+                  className="w-14 h-14 rounded-2xl object-cover border-2 border-[#B76E79]/60 shadow-xl"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -106,14 +106,14 @@ export const TestimonialsSection: React.FC = () => {
           <div className="flex justify-center md:justify-between items-center mt-8 md:absolute md:top-1/2 md:-translate-y-1/2 md:inset-x-[-70px] gap-4 z-20">
             <button
               onClick={handlePrev}
-              className="p-4 bg-white/[0.03] border border-white/5 hover:border-[#D4AF37] hover:bg-[#5A0B17]/35 rounded-full text-white transition-all duration-300 shadow-2xl hover:scale-110 active:scale-95 cursor-pointer"
+              className="p-4 bg-white/[0.03] border border-white/5 hover:border-[#B76E79]/50 hover:bg-[#5A0B17]/45 rounded-full text-white transition-all duration-300 shadow-2xl hover:scale-110 active:scale-95 cursor-pointer"
               aria-label="السابق"
             >
               <ChevronRight className="w-5 h-5 text-white" />
             </button>
             <button
               onClick={handleNext}
-              className="p-4 bg-white/[0.03] border border-white/5 hover:border-[#D4AF37] hover:bg-[#5A0B17]/35 rounded-full text-white transition-all duration-300 shadow-2xl hover:scale-110 active:scale-95 cursor-pointer"
+              className="p-4 bg-white/[0.03] border border-white/5 hover:border-[#B76E79]/50 hover:bg-[#5A0B17]/45 rounded-full text-white transition-all duration-300 shadow-2xl hover:scale-110 active:scale-95 cursor-pointer"
               aria-label="التالي"
             >
               <ChevronLeft className="w-5 h-5 text-white" />
@@ -127,7 +127,7 @@ export const TestimonialsSection: React.FC = () => {
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  activeIndex === idx ? 'bg-[#D4AF37] w-8' : 'bg-white/10 hover:bg-white/20'
+                  activeIndex === idx ? 'bg-[#E5D4C0] w-8' : 'bg-white/10 hover:bg-white/20'
                 }`}
                 aria-label={`تخطي للشهادة ${idx + 1}`}
               />

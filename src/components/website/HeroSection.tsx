@@ -66,20 +66,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       
       {/* ================= CINEMATIC STADIUM BACKDROP & LIGHT BEAMS ================= */}
       {/* Radial glow representing the stadium floodlights */}
-      <div className="absolute top-[-10%] left-[30%] w-[800px] h-[500px] bg-gradient-to-b from-[#D4AF37]/15 via-[#5A0B17]/10 to-transparent rounded-full blur-[160px] pointer-events-none z-0 transform-gpu"></div>
+      <div className="absolute top-[-10%] left-[30%] w-[800px] h-[500px] bg-gradient-to-b from-[#B76E79]/10 via-[#5A0B17]/10 to-transparent rounded-full blur-[160px] pointer-events-none z-0 transform-gpu"></div>
       <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#5A0B17]/15 rounded-full blur-[140px] pointer-events-none z-0 transform-gpu"></div>
       
       {/* Diagonal Light Beams (Stadium Atmosphere) */}
       <div className="absolute inset-0 opacity-25 pointer-events-none z-0 mix-blend-screen overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-[35%] h-[150%] bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent transform rotate-[35deg] blur-[80px] transform-gpu"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[35%] h-[150%] bg-gradient-to-r from-transparent via-[#B76E79]/15 to-transparent transform rotate-[35deg] blur-[80px] transform-gpu"></div>
         <div className="absolute top-[-10%] right-[15%] w-[25%] h-[150%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform rotate-[25deg] blur-[100px] transform-gpu"></div>
       </div>
 
       {/* Subtle Dust / Grass Particle Simulation */}
       <div className="absolute inset-0 opacity-30 pointer-events-none z-0 mix-blend-color-dodge">
-        <div className="absolute top-[40%] left-[10%] w-2 h-2 bg-[#D4AF37] rounded-full filter blur-[1px] animate-pulse"></div>
+        <div className="absolute top-[40%] left-[10%] w-2 h-2 bg-[#B76E79]/50 rounded-full filter blur-[1px] animate-pulse"></div>
         <div className="absolute top-[60%] right-[20%] w-3 h-3 bg-white rounded-full filter blur-[2px] animate-ping duration-3000"></div>
-        <div className="absolute top-[30%] right-[40%] w-1.5 h-1.5 bg-[#D4AF37] rounded-full filter blur-[0.5px]"></div>
+        <div className="absolute top-[30%] right-[40%] w-1.5 h-1.5 bg-[#B76E79]/50 rounded-full filter blur-[0.5px]"></div>
         <div className="absolute top-[75%] left-[35%] w-2 h-2 bg-white rounded-full filter blur-[1.5px] animate-bounce"></div>
       </div>
 
@@ -95,8 +95,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.8 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 text-[#D4AF37] text-xs font-black tracking-widest uppercase shadow-2xl">
-              <Zap className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 text-[#E5D4C0] text-xs font-black tracking-widest uppercase shadow-2xl">
+              <Zap className="w-3.5 h-3.5 text-[#E5D4C0] animate-pulse" />
               أكاديمية النخبة الرياضية الأولى بالمملكة
             </div>
 
@@ -127,7 +127,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <h2 className="text-4xl sm:text-5xl lg:text-[4.2rem] font-serif font-black text-white leading-[1.1] tracking-tight">
                   الأشوال أكاديمي
                 </h2>
-                <h3 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-sans font-black text-transparent bg-clip-text bg-gradient-to-l from-white via-slate-200 to-[#D4AF37] leading-[1.1]">
+                <h3 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-sans font-black text-transparent bg-clip-text bg-gradient-to-l from-white via-slate-200 to-[#E5D4C0] leading-[1.1]">
                   نبني الأبطال للمنصات العالمية
                 </h3>
               </div>
@@ -152,10 +152,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           >
             <button
               onClick={() => setIsModalOpen(true)}
-              className="px-9 py-5 bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#AA7C11] text-slate-950 font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_15px_30px_rgba(212,175,55,0.25)] hover:shadow-[0_20px_45px_rgba(212,175,55,0.4)] cursor-pointer flex items-center gap-2.5"
+              className="px-9 py-5 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_15px_30px_rgba(90,11,23,0.3)] hover:shadow-[0_20px_45px_rgba(90,11,23,0.5)] border border-[#B76E79]/30 hover:border-[#B76E79]/60 cursor-pointer flex items-center gap-2.5"
             >
               احجز تجربة مجانية للبطل
-              <Sparkles className="w-4 h-4 text-slate-950" />
+              <Sparkles className="w-4 h-4 text-[#E5D4C0] animate-pulse" />
             </button>
             
             <button
@@ -194,7 +194,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-            className="absolute w-[350px] h-[350px] sm:w-[480px] sm:h-[480px] rounded-full border border-[#D4AF37]/20 border-dashed pointer-events-none z-0"
+            className="absolute w-[350px] h-[350px] sm:w-[480px] sm:h-[480px] rounded-full border border-[#B76E79]/20 border-dashed pointer-events-none z-0"
           />
           <motion.div 
             animate={{ rotate: -360 }}
@@ -220,7 +220,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             />
 
             {/* Glowing lens flares & ambient overlay on image */}
-            <div className="absolute top-[15%] left-[20%] w-24 h-24 bg-[#D4AF37]/30 rounded-full blur-3xl pointer-events-none mix-blend-color-dodge z-30"></div>
+            <div className="absolute top-[15%] left-[20%] w-24 h-24 bg-[#B76E79]/20 rounded-full blur-3xl pointer-events-none mix-blend-color-dodge z-30"></div>
           </motion.div>
 
           {/* Floating Luxury Badges/Awards (Awwwards Style) */}
@@ -229,7 +229,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute top-[10%] right-[5%] z-20 glass-card luxury-border p-4 rounded-2xl flex items-center gap-3 shadow-2xl pointer-events-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#5A0B17]/40 flex items-center justify-center border border-[#D4AF37]/30 text-[#D4AF37]">
+            <div className="w-10 h-10 rounded-xl bg-[#5A0B17]/40 flex items-center justify-center border border-[#B76E79]/30 text-[#E5D4C0]">
               <Trophy className="w-5 h-5" />
             </div>
             <div className="text-right">
@@ -244,7 +244,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="absolute bottom-[15%] left-[2%] z-20 glass-card luxury-border p-4 rounded-2xl flex items-center gap-3 shadow-2xl pointer-events-none"
           >
             <div className="w-10 h-10 rounded-xl bg-slate-950/85 flex items-center justify-center border border-white/10 text-white">
-              <Users className="w-5 h-5 text-[#D4AF37]" />
+              <Users className="w-5 h-5 text-[#E5D4C0]" />
             </div>
             <div className="text-right">
               <span className="text-[9px] text-slate-400 font-bold block">الكفاءة المهنية</span>
@@ -255,9 +255,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <motion.div 
             animate={{ scale: [1, 1.05, 1], rotate: [0, 2, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute top-[50%] right-[-5%] z-20 bg-gradient-to-tr from-[#1E090B] to-[#5A0B17] border border-[#D4AF37]/45 p-4.5 rounded-[22px] flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(90,11,23,0.5)] pointer-events-none text-center min-w-[100px]"
+            className="absolute top-[50%] right-[-5%] z-20 bg-gradient-to-tr from-[#1E090B] to-[#5A0B17] border border-[#B76E79]/35 p-4.5 rounded-[22px] flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(90,11,23,0.5)] pointer-events-none text-center min-w-[100px]"
           >
-            <span className="text-xl font-black font-mono text-[#D4AF37]">٥/٥</span>
+            <span className="text-xl font-black font-mono text-[#E5D4C0]">٥/٥</span>
             <span className="text-[8px] text-slate-300 font-black tracking-widest uppercase">تقييم أولياء الأمور</span>
           </motion.div>
 
@@ -273,7 +273,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-gradient-to-b from-[#1C080B] to-[#120204] border border-[#D4AF37]/40 rounded-[32px] p-8 w-full max-w-lg shadow-[0_30px_80px_rgba(0,0,0,0.9)] relative text-right bg-noise overflow-hidden"
+              className="bg-gradient-to-b from-[#1C080B] to-[#120204] border border-[#B76E79]/35 rounded-[32px] p-8 w-full max-w-lg shadow-[0_30px_80px_rgba(0,0,0,0.9)] relative text-right bg-noise overflow-hidden"
             >
               {/* Abs decorative glow inside modal */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A0B17]/20 rounded-full blur-2xl pointer-events-none" />
@@ -287,10 +287,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="space-y-6">
                 <div>
-                  <span className="text-[#D4AF37] text-xs font-black tracking-widest block mb-1">انضم لكتيبة النخبة</span>
+                  <span className="text-[#E5D4C0] text-xs font-black tracking-widest block mb-1">انضم لكتيبة النخبة</span>
                   <h3 className="text-2xl font-black text-white flex items-center gap-2 justify-end font-serif">
                     طلب حصة تقييمية مجانية
-                    <Sparkles className="w-5 h-5 text-[#D4AF37] animate-pulse" />
+                    <Sparkles className="w-5 h-5 text-[#E5D4C0] animate-pulse" />
                   </h3>
                   <p className="text-xs text-slate-400 mt-1">دع الخبراء يقيّمون المهارة الحركية والرياضية لطفلك فورا</p>
                 </div>
@@ -304,7 +304,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       placeholder="مثال: فيصل بن أحمد الأشول"
                       value={trialForm.name}
                       onChange={e => setTrialForm({ ...trialForm, name: e.target.value })}
-                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#D4AF37] text-white text-xs text-right outline-none transition-all placeholder:text-slate-600 focus:bg-slate-950"
+                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#B76E79]/55 text-white text-xs text-right outline-none transition-all placeholder:text-slate-600 focus:bg-slate-950"
                     />
                   </div>
 
@@ -319,7 +319,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         placeholder="١٢ سنة"
                         value={trialForm.age}
                         onChange={e => setTrialForm({ ...trialForm, age: e.target.value })}
-                        className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#D4AF37] text-white text-xs text-right outline-none transition-all placeholder:text-slate-600 focus:bg-slate-950"
+                        className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#B76E79]/55 text-white text-xs text-right outline-none transition-all placeholder:text-slate-600 focus:bg-slate-950"
                       />
                     </div>
                     <div className="space-y-2">
@@ -330,7 +330,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         placeholder="05xxxxxxxx"
                         value={trialForm.phone}
                         onChange={e => setTrialForm({ ...trialForm, phone: e.target.value })}
-                        className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#D4AF37] text-white text-xs text-right outline-none transition-all placeholder:text-slate-600 focus:bg-slate-950"
+                        className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#B76E79]/55 text-white text-xs text-right outline-none transition-all placeholder:text-slate-600 focus:bg-slate-950"
                       />
                     </div>
                   </div>
@@ -340,7 +340,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <select
                       value={trialForm.sport}
                       onChange={e => setTrialForm({ ...trialForm, sport: e.target.value })}
-                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#D4AF37] text-white text-xs text-right outline-none cursor-pointer transition-all focus:bg-slate-950"
+                      className="w-full px-5 py-4 bg-slate-950/80 border border-white/10 rounded-2xl focus:border-[#B76E79]/55 text-white text-xs text-right outline-none cursor-pointer transition-all focus:bg-slate-950"
                     >
                       <option value="كرة القدم">مدرسة كرة القدم الفاخرة</option>
                       <option value="كرة السلة">أكاديمية كرة السلة الذهبية</option>
@@ -352,7 +352,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <div className="pt-3">
                     <button
                       type="submit"
-                      className="w-full py-4.5 bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#AA7C11] text-slate-950 font-black rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-xl hover:shadow-[#D4AF37]/20 flex items-center justify-center gap-2"
+                      className="w-full py-4.5 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white font-black rounded-2xl text-xs sm:text-sm border border-[#B76E79]/30 hover:border-[#B76E79]/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-xl flex items-center justify-center gap-2"
                     >
                       أرسل طلب الانضمام المجاني للبطل
                       <ArrowLeft className="w-4 h-4" />
