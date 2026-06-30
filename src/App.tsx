@@ -42,6 +42,13 @@ import { ReportsView } from './components/ReportsView';
 import { ToastsContainer, ToastMessage } from './components/ToastsContainer';
 import { WebsiteView } from './components/WebsiteView';
 import { ClientPortalView } from './components/ClientPortalView';
+import { AcademyView } from './components/AcademyView';
+import { BranchesView } from './components/BranchesView';
+import { SportsView } from './components/SportsView';
+import { MembershipsView } from './components/MembershipsView';
+import { SessionsView } from './components/SessionsView';
+import { PerformanceView } from './components/PerformanceView';
+import { PayrollView } from './components/PayrollView';
 
 export default function App() {
   // 1. حالات الصفحات والتنقل والمنصة
@@ -209,6 +216,7 @@ export default function App() {
           playersList={playersList}
           parentsList={parentsList}
           coachesList={coachesList}
+          employeesList={employeesList}
           transactionsList={transactionsList}
           onNavigateToWebsite={() => setAppMode('website')}
         />
@@ -504,13 +512,20 @@ export default function App() {
                   
                   {[
                     { id: 'dashboard', label: 'لوحة التحكم', icon: Activity },
+                    { id: 'academy', label: 'إعدادات الأكاديمية', icon: Building },
+                    { id: 'branches', label: 'الفروع والملاعب', icon: Building },
+                    { id: 'sports', label: 'البرامج والرياضات', icon: Award },
+                    { id: 'memberships', label: 'بطاقات العضوية QR', icon: Award },
                     { id: 'players', label: 'إدارة اللاعبين', icon: Users },
                     { id: 'parents', label: 'أولياء الأمور', icon: Heart },
                     { id: 'staff', label: 'الكادر والمدربين', icon: UserCheck },
+                    { id: 'sessions', label: 'حصص التدريب الميداني', icon: CheckSquare },
+                    { id: 'performance', label: 'الأداء والتقييم الفني', icon: Activity },
                     { id: 'attendance', label: 'الحضور والانصراف', icon: CheckSquare },
                     { id: 'subscriptions', label: 'باقات الاشتراكات', icon: Award },
                     { id: 'payments', label: 'الحسابات والمدفوعات', icon: BadgeDollarSign },
-                    { id: 'calendar', label: 'الحصص والملاعب', icon: Calendar },
+                    { id: 'payroll', label: 'الرواتب ومسيرات الكادر', icon: BadgeDollarSign },
+                    { id: 'calendar', label: 'جدول الحصص الميداني', icon: Calendar },
                     { id: 'inventory', label: 'المخازن والموردين', icon: Warehouse },
                     { id: 'equipment', label: 'عهد ومعدات المدربين', icon: ClipboardCheck },
                     { id: 'rentals', label: 'إيجارات الملاعب', icon: Building },
@@ -773,6 +788,27 @@ export default function App() {
                   {currentPage === 'reports' && (
                     <ReportsView />
                   )}
+                  {currentPage === 'academy' && (
+                    <AcademyView onAddToast={addToast} />
+                  )}
+                  {currentPage === 'branches' && (
+                    <BranchesView onAddToast={addToast} />
+                  )}
+                  {currentPage === 'sports' && (
+                    <SportsView onAddToast={addToast} />
+                  )}
+                  {currentPage === 'memberships' && (
+                    <MembershipsView onAddToast={addToast} playersList={playersList} />
+                  )}
+                  {currentPage === 'sessions' && (
+                    <SessionsView onAddToast={addToast} coachesList={coachesList} playersList={playersList} />
+                  )}
+                  {currentPage === 'performance' && (
+                    <PerformanceView onAddToast={addToast} playersList={playersList} />
+                  )}
+                  {currentPage === 'payroll' && (
+                    <PayrollView onAddToast={addToast} coachesList={coachesList} employeesList={employeesList} />
+                  )}
                   {currentPage === 'notifications' && (
                     <NotificationsView 
                       onAddToast={addToast} 
@@ -934,6 +970,27 @@ export default function App() {
                         logsList={logsList} 
                         setLogsList={setLogsList} 
                       />
+                    )}
+                    {currentPage === 'academy' && (
+                      <AcademyView onAddToast={addToast} />
+                    )}
+                    {currentPage === 'branches' && (
+                      <BranchesView onAddToast={addToast} />
+                    )}
+                    {currentPage === 'sports' && (
+                      <SportsView onAddToast={addToast} />
+                    )}
+                    {currentPage === 'memberships' && (
+                      <MembershipsView onAddToast={addToast} playersList={playersList} />
+                    )}
+                    {currentPage === 'sessions' && (
+                      <SessionsView onAddToast={addToast} coachesList={coachesList} playersList={playersList} />
+                    )}
+                    {currentPage === 'performance' && (
+                      <PerformanceView onAddToast={addToast} playersList={playersList} />
+                    )}
+                    {currentPage === 'payroll' && (
+                      <PayrollView onAddToast={addToast} coachesList={coachesList} employeesList={employeesList} />
                     )}
                     {currentPage === 'notifications' && (
                       <NotificationsView 

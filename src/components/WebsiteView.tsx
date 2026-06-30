@@ -137,8 +137,15 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
             })}
           </nav>
 
-          {/* Action Links & Profile Icon Only (No ERP/Admin visible on general, No normal portal button) */}
+          {/* Action Links & Profile Icon with ERP Dashboard Access */}
           <div className="hidden sm:flex items-center gap-3.5">
+            <button
+              onClick={onNavigateToAdmin}
+              className="px-5 py-2.5 bg-gradient-to-r from-[#5A0B17] via-[#6E1120] to-[#801426] text-white border border-[#B76E79]/30 hover:from-[#6E1120] hover:to-[#961e31] hover:border-[#B76E79]/50 font-black rounded-xl text-xs transition-all duration-300 hover:scale-105 shadow-md cursor-pointer flex items-center gap-1.5"
+            >
+              <span>لوحة الإدارة (ERP)</span>
+            </button>
+
             <div className="relative">
               <button
                 onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
@@ -179,6 +186,13 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
                         ))}
                         <div className="border-t border-[#B76E79]/15 my-1.5"></div>
                         <button
+                          onClick={() => { setProfileDropdownOpen(false); onNavigateToAdmin(); }}
+                          className="w-full text-right px-3.5 py-2 hover:bg-[#5A0B17]/20 rounded-xl text-xs font-black text-[#E5D4C0] block transition-all"
+                        >
+                          لوحة التحكم الإدارية
+                        </button>
+                        <div className="border-t border-[#B76E79]/15 my-1.5"></div>
+                        <button
                           onClick={() => { setIsLoggedIn(false); setProfileDropdownOpen(false); onAddToast('تم تسجيل الخروج وتأمين الحساب', 'info'); }}
                           className="w-full text-right px-3.5 py-2 hover:bg-rose-950/20 rounded-xl text-xs font-black text-rose-400 block transition-all"
                         >
@@ -201,6 +215,13 @@ export const WebsiteView: React.FC<WebsiteViewProps> = ({
                           className="w-full text-right px-3.5 py-2.5 hover:bg-[#5A0B17]/20 rounded-xl text-xs font-black text-slate-200 hover:text-[#B76E79] block transition-all"
                         >
                           إنشاء حساب
+                        </button>
+                        <div className="border-t border-white/5 my-1.5"></div>
+                        <button
+                          onClick={() => { setProfileDropdownOpen(false); onNavigateToAdmin(); }}
+                          className="w-full text-right px-3.5 py-2.5 hover:bg-[#5A0B17]/20 rounded-xl text-xs font-black text-[#E5D4C0] block transition-all"
+                        >
+                          لوحة التحكم الإدارية
                         </button>
                       </>
                     )}
